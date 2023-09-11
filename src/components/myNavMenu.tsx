@@ -24,7 +24,8 @@ import {
 const MyNavMenu = () => {
     return (
         <>
-            <section className='my-10 mx-32 flex justify-between' >
+            {/* <section className='my-10 mx-32 flex justify-between' > */}
+            <section className='my-10 container flex justify-between' >
 
                 <div className='' >
                     <Image alt='logo' src={logo} />
