@@ -17,14 +17,14 @@ const HeroSection = () => {
   }
 
   return (
-    <section className='my-16 container grid grid-cols-2 gap-20 text-3xl' >
+    <section className='my-20 container grid grid-cols-2 gap-20 text-3xl' >
       <div className='flex flex-col justify-center' >
 
         <div>
           <Button className='px-5 bg-blue-200 text-blue-700 font-bold text-[1rem] mb-8' >Sale 70%</Button>
         </div>
 
-        <h1 className='text-6xl font-bold md:mr-10' >An Industrial Take on Streetwear</h1>
+        <h2 className='text-6xl font-bold md:mr-10' >An Industrial Take on Streetwear</h2>
 
         <p className='mr-32 leading-7 text-[1rem] my-10 text-gray-500' >Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
 
