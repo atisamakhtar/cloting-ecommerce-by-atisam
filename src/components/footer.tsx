@@ -14,16 +14,16 @@ const Footer = () => {
 
     const availableProducts = useContext(ProductsContext);
 
-    console.log("availableProducts from footer", availableProducts)
+    // console.log("availableProducts from footer", availableProducts)
 
     const footerCss = {
         "display": "grid",
-        "grid-template-columns": "2fr 1fr 1fr 1fr"
+        "gridTemplateColumns": "2fr 1fr 1fr 1fr"
     }
 
     const copyright = {
         "display": "grid",
-        "grid-template-columns": "auto auto auto"
+        "gridTemplateColumns": "auto auto auto"
     }
 
     return (

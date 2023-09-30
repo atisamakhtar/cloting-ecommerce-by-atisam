@@ -28,7 +28,9 @@ const MyNavMenu = () => {
             <section className='my-10 container flex justify-between' >
 
                 <div className='' >
-                    <Image alt='logo' src={logo} />
+                    <Link href={"/"}>
+                        <Image alt='logo' src={logo} />
+                    </Link>
                 </div>
 
                 <NavigationMenu className='' >
@@ -36,25 +38,25 @@ const MyNavMenu = () => {
                     <NavigationMenuList>
 
                         <NavigationMenuItem className="px-5" >
-                            <Link href={"/about"} className="px-4" legacyBehavior passHref>
+                            <Link href={"/female"} className="px-4" legacyBehavior passHref>
                                 <NavigationMenuLink>Female</NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem className="px-5" >
-                            <Link href={"/about"} className="px-4" legacyBehavior passHref>
+                            <Link href={"/male"} className="px-4" legacyBehavior passHref>
                                 <NavigationMenuLink>Male</NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem className="px-5" >
-                            <Link href={"/about"} className="px-4" legacyBehavior passHref>
+                            <Link href={"/kids"} className="px-4" legacyBehavior passHref>
                                 <NavigationMenuLink>Kids</NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>
 
                         <NavigationMenuItem className="px-5" >
-                            <Link href={"/about"} className="px-4" legacyBehavior passHref>
+                            <Link href={"/products"} className="px-4" legacyBehavior passHref>
                                 <NavigationMenuLink>All Products</NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>

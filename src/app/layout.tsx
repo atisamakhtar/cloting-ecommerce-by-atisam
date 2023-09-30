@@ -2,6 +2,8 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google';
 import ProductsContextComponent from "../../context/productsContext";
+import MyNavMenu from '@/components/myNavMenu';
+import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +21,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ProductsContextComponent>
+          <MyNavMenu/>
           {children}
+          <Footer/>
         </ProductsContextComponent>
       </body>
     </html>
