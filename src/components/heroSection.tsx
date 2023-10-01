@@ -2,13 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { FiShoppingCart } from "react-icons/fi";
-import Bazaar from "/public/media/bazaar.png";
-import Bustle from "/public/media/bustle.png";
-import Versace from "/public/media/versace.png";
-import Instyle from "/public/media/Instyle.png";
+import Bazaar from "public/media/bazaar.png";
+import Bustle from "public/media/bustle.png";
+import Versace from "public/media/versace.png";
+import Instyle from "public/media/Instyle.png";
 
-// import lady from "@/public/media/lady.webp";
-import lady from "/public/media/lady.webp";
+// import lady from "@public/media/lady.webp";
+import lady from "public/media/lady.webp";
 
 const HeroSection = () => {
 
