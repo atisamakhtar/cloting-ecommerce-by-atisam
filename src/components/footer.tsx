@@ -1,7 +1,7 @@
 "use client"
 
 import React, {useContext} from 'react';
-import logo from "/public/media/Logo.webp";
+import logo from "public/media/Logo.webp";
 import Image from 'next/image';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { BiLogoFacebook } from 'react-icons/bi';

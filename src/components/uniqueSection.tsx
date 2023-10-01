@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import unique from "/public/media/unique-and-authentic.webp"
+import unique from "public/media/unique-and-authentic.webp"
 import { Button } from "@/components/ui/button"
 
 const UniqueSection = () => {
