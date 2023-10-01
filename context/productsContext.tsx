@@ -7,7 +7,8 @@ export type productType = {
     title: string,
     tagline: string,
     price: number,
-    category: string
+    category: string,
+    image: string,
 }
 
 export const ProductsContext = createContext<productType[]>([]);
@@ -18,98 +19,104 @@ const availableProducts: productType[] = [
         title: "Brushed Raglan Sweatshirt",
         tagline: "Sweater",
         price: 195,
-        category: "female"
+        category: "female",
+        image: "/media/product1.png",
     },
     {
         id: 2,
         title: "Cameryn Sash Tie Dress",
         tagline: "Dress",
         price: 545,
-        category: "female"
+        category: "female",
+        image: "/media/product2.png",
     },
     {
         id: 3,
         title: "Flex Sweatshirt",
         tagline: "Sweater",
         price: 175,
-        category: "female"
+        category: "female",
+        image: "/media/product3.png",
     },
     {
         id: 4,
         title: "Flex Sweatpants",
         tagline: "Pants",
         price: 175,
-        category: "female"
+        category: "female",
+        image: "/media/product4.png",
     },
     {
         id: 5,
         title: "Pink Fleece Sweatpants",
         tagline: "Pants",
         price: 195,
-        category: "female"
+        category: "female",
+        image: "/media/product5.png",
     },
     {
         id: 6,
         title: "Lite Sweatpants",
         tagline: "Pants",
         price: 150,
-        category: "female"
+        category: "female",
+        image: "/media/product6.png",
     },
     {
         id: 7,
         title: "Imperial Alpaca Hoodie",
         tagline: "Jackets",
         price: 525,
-        category: "female"
+        category: "female",
+        image: "/media/product7.png",
     },
     {
         id: 8,
         title: "Muscle Tank",
         tagline: "T Shirts",
         price: 75,
-        category: "female"
+        category: "female",
+        image: "/media/product8.png",
     },
     {
         id: 9,
         title: "Brushed Bomber",
         tagline: "Jackets",
         price: 225,
-        category: "female"
+        category: "female",
+        image: "/media/product9.png",
     },
     {
         id: 10,
         title: "Flex Push Button Bomber",
         tagline: "Jackets",
         price: 225,
-        category: "female"
+        category: "male",
+        image: "/media/product10.png",
     },
     {
         id: 11,
         title: "Raglan Sweatshirt",
         tagline: "Sweater",
         price: 195,
-        category: "male"
+        category: "male",
+        image: "/media/product11.png",
     },
     {
         id: 12,
-        title: "Raglan Sweatshirt",
-        tagline: "Sweater",
-        price: 195,
-        category: "male"
-    },
-    {
-        id: 13,
         title: "Nicker shirt",
         tagline: "Shorts",
         price: 225,
-        category: "kids"
+        category: "kids",
+        image: "/media/product12.jpg",
     },
     {
-        id: 14,
+        id: 13,
         title: "Kurta Pajama",
         tagline: "Complete",
         price: 195,
-        category: "kids"
+        category: "kids",
+        image: "/media/product13.png",
     },
 ]
 

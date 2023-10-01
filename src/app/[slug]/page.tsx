@@ -44,10 +44,10 @@ const page = () => {
                 {required.map((sing: any, index: any) => (
                     <div key={index} >
                         <Link href={`/products/${sing.id}`}>
-                            <Image width={250} alt='product image' src={prodImg} />
-                            <h2 className='text-xl font-semibold' >{sing.title}</h2>
+                            <Image width={250} alt='product image' height={100} src={sing.image} />
+                            <h2 className='mt-4 text-xl font-semibold' >{sing.title}</h2>
                             <p>{sing.tagline}</p>
-                            <p>${sing.price}</p>
+                            <p className='mt-3 text-xl font-bold'>${sing.price}</p>
                         </Link>
                     </div>
                 ))}

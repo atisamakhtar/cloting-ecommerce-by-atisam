@@ -16,6 +16,10 @@ const HeroSection = () => {
     backgroundColor: "#ffece3",
   }
 
+  const scaleKro = {
+    "transform": "scale(1.1)"
+  }
+
   return (
     <section className='my-20 container grid grid-cols-2 gap-20 text-3xl' >
       <div className='flex flex-col justify-center' >
@@ -43,8 +47,8 @@ const HeroSection = () => {
         </div>
 
       </div>
-      <div className='' >
-        <Image src={lady} alt='Lady hero image' style={styles} className='rounded-full' />
+      <div style={styles} className='rounded-full'>
+        <Image src={lady} style={scaleKro} alt='Lady hero image' />
       </div>
     </section>
   )
