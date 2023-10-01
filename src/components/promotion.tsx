@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from "./ui/button";
 
-import promotion1 from "../../public/media/promotion1.webp";
-import promotion2 from "../../public/media/promotion2.png";
-import promotion3 from "../../public/media/promotion3.webp";
+import promotion1 from "/public/media/promotion1.webp";
+import promotion2 from "/public/media/promotion2.png";
+import promotion3 from "/public/media/promotion3.webp";
 
 const Promotion = () => {
     return (

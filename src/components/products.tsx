@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import homeProduct1 from "../../public/media/homeProduct1.png";
-import homeProduct2 from "../../public/media/homeProduct2.png";
-import homeProduct3 from "../../public/media/homeProduct3.png";
+import homeProduct1 from "/public/media/homeProduct1.png";
+import homeProduct2 from "/public/media/homeProduct2.png";
+import homeProduct3 from "/public/media/homeProduct3.png";
 
 const Products = () => {
     return (

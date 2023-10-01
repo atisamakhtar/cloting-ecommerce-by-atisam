@@ -2,30 +2,17 @@
 
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
-import prodImage from "../../../../public/media/homeProduct1.png";
+import prodImage from "../..//public/media/homeProduct1.png";
 import { useRouter, useParams } from 'next/navigation';
 import { ProductsContext } from '../../../../context/productsContext';
 import { productType } from '../../../../context/productsContext';
 import { Button } from "@/components/ui/button";
 import { FiShoppingCart } from "react-icons/fi";
+import styles from "../../../css/products.module.css";
 
 const page = () => {
 
     const [count, setCount] = useState(1);
-
-    const styles = {
-        "display": "grid",
-        "gridTemplateColumns": "2fr 1fr",
-        "gridGap": "2rem",
-        "justifyContent": "space-between",
-        // "justifyItems": "center",
-    }
-
-    const imagesGrid = {
-        "display": "grid",
-        "gridTemplateColumns": "0.3fr 2fr",
-        "gridGap": "2rem",
-    }
 
     const container = {
         "margin": "4rem 8rem",
@@ -43,8 +30,8 @@ const page = () => {
 
     return (
         (required) && <section style={container} >
-            <section className='' style={styles}>
-                <div style={imagesGrid} >
+            <section className={styles.singleProductWrapper}>
+                <div className={styles.imagesGrid} >
                     <div>
                         <Image className='w-[100%]' src={required.image} width={250} height={250}  alt='Product Image' />
                     </div>

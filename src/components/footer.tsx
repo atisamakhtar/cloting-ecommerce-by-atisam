@@ -1,12 +1,13 @@
 "use client"
 
 import React, {useContext} from 'react';
-import logo from "../../public/media/Logo.webp";
+import logo from "/public/media/Logo.webp";
 import Image from 'next/image';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { BiLogoFacebook } from 'react-icons/bi';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import {ProductsContext} from "../../context/productsContext";
+import styles from "../css/footer.module.css";
 
 // AiOutlineTwitter
 
@@ -16,19 +17,9 @@ const Footer = () => {
 
     // console.log("availableProducts from footer", availableProducts)
 
-    const footerCss = {
-        "display": "grid",
-        "gridTemplateColumns": "2fr 1fr 1fr 1fr"
-    }
-
-    const copyright = {
-        "display": "grid",
-        "gridTemplateColumns": "auto auto auto"
-    }
-
     return (
         <>
-            <section className='py-[4rem] px-[8rem] upper-footer' style={footerCss} >
+            <section className={`py-[4rem] px-[8rem] upper-footer ${styles.footerCss}`} >
                 <div className='w-[75%] flex justify-between flex-col' >
                     <Image width="180" src={logo} alt="footer logo" />
                     <p>Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
@@ -69,7 +60,7 @@ const Footer = () => {
                     </ul>
                 </div>
             </section>
-            <section className='border-t-[1px] border-black' style={copyright}>
+            <section className={`border-t-[1px] border-black ${styles.copyright}`}>
                 <p className='text-gray-500 my-[1.5rem] mx-[8rem] text-center' >Copyright © 2022 Dine Market</p>
                 <p className='text-gray-500 my-[1.5rem] mx-[8rem] text-center' >
                     Design by.
