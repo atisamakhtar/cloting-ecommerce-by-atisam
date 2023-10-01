@@ -2,7 +2,7 @@
 
 import React, { useContext, useState } from 'react';
 import Image from 'next/image';
-import prodImage from "../..//public/media/homeProduct1.png";
+import prodImage from "/public/media/homeProduct1.png";
 import { useRouter, useParams } from 'next/navigation';
 import { ProductsContext } from '../../../../context/productsContext';
 import { productType } from '../../../../context/productsContext';

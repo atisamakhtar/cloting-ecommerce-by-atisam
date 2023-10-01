@@ -3,7 +3,7 @@
 import React, { useContext } from 'react';
 import { ProductsContext } from '../../../context/productsContext';
 import Image from 'next/image';
-import prodImg from "..//public/media/homeProduct1.png";
+import prodImg from "/public/media/homeProduct1.png";
 import Link from 'next/link';
 import styles from "../../css/products.module.css";
 
