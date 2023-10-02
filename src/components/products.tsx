@@ -15,23 +15,23 @@ const Products = () => {
             </div>
 
             {/* Home product 1 section */}
-            <section className='grid grid-cols-3 space-x-10' >
+            <section className='grid md:grid-cols-3 md:space-x-10' >
 
-                <div className="m-auto hover:scale-110 transition">
+                <div className="m-auto mb-6 hover:scale-110 transition">
                     <Image src={homeProduct1} alt="Promotion 1 image" />
                     <p className="font-semibold text-xl product-name mt-4 mb-1">Brushed Raglan Sweatshirt</p>
                     <p className="font-semibold text-xl product-price">$ 195</p>
                 </div>
 
                 {/* Home product 2 section */}
-                <div className='m-auto hover:scale-110 transition' >
+                <div className='m-auto mb-6 hover:scale-110 transition' >
                     <Image className='' alt='Promotion 2 image' src={homeProduct2} />
                     <p className="font-semibold text-xl product-name mt-4 mb-1">Cameryn Sash Tie Dress</p>
                     <p className="font-semibold text-xl product-price">$ 545</p>
                 </div>
 
                 {/* Home product 3 section */}
-                <div className='m-auto hover:scale-110 transition'>
+                <div className='m-auto mb-6 hover:scale-110 transition'>
                     <Image className='' alt='Promotion 2 image' src={homeProduct3} />
                     <p className="font-semibold text-xl product-name mt-4 mb-1">Flex Sweatshirt</p>
                     <p className="font-semibold text-xl product-price">$ 175</p>

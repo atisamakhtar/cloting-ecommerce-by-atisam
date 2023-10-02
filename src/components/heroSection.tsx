@@ -21,29 +21,29 @@ const HeroSection = () => {
   }
 
   return (
-    <section className='my-20 container grid grid-cols-2 gap-20 text-3xl' >
+    <section className='my-20 container grid md:grid-cols-2 gap-20 text-3xl' >
       <div className='flex flex-col justify-center' >
 
         <div>
           <Button className='px-5 bg-blue-200 text-blue-700 font-bold text-[1rem] mb-8' >Sale 70%</Button>
         </div>
 
-        <h2 className='text-6xl font-bold md:mr-10' >An Industrial Take on Streetwear</h2>
+        <h2 className='md:text-6xl font-bold md:mr-10' >An Industrial Take on Streetwear</h2>
 
-        <p className='mr-32 leading-7 text-[1rem] my-10 text-gray-500' >Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
+        <p className='md:mr-32 leading-7 text-[1rem] my-10 text-gray-500' >Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
 
         <div>
-          <Button className='border-none rounded-none text-lg py-7' >
+          <Button className='border-none rounded-none md:text-lg py-7' >
             <FiShoppingCart className="mr-3" />
             Start Shopping
           </Button>
         </div>
 
-        <div className="my-10 logos flex justify-between">
-          <Image alt='instyle' src={Bazaar} />
-          <Image alt='instyle' src={Bustle} />
-          <Image alt='instyle' src={Versace} />
-          <Image alt='instyle' src={Instyle} />
+        <div className="grid grid-cols-2 space-y-4 md:space-y-0 md:grid-cols-4 my-10 logos justify-between">
+          <div><Image alt='instyle' src={Bazaar} /></div>
+          <div><Image alt='instyle' src={Bustle} /></div>
+          <div><Image alt='instyle' src={Versace} /></div>
+          <div><Image alt='instyle' src={Instyle} /></div>
         </div>
 
       </div>

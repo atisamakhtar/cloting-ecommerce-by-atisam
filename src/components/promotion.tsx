@@ -15,7 +15,7 @@ const Promotion = () => {
                 <h2 className='my-3 text-4xl font-bold'>Our Promotions Events</h2>
             </div>
 
-            <section className='my-5 grid grid-cols-2 gap-10' >
+            <section className='my-5 grid md:grid-cols-2 gap-10' >
 
                 {/* Promotion 1 section */}
                 <div>
@@ -39,7 +39,7 @@ const Promotion = () => {
                 </div>
 
                 {/* promotion 2 section */}
-                <section className='my-5 grid grid-cols-2 space-x-10'>
+                <section className='my-5 grid md:grid-cols-2 space-y-0 md:space-y-6 md:space-x-10 gap-10'>
                     <div className='bg-yellow-100 flex flex-col my-0' >
                         <div className='p-5 justify-between' >
                             <p className='text-sm' >Flex Sweatshirt</p>

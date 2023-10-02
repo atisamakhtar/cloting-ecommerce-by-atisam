@@ -13,7 +13,7 @@
         grid-gap: 2rem;
     }
 
-    .fourColsDesktop {
+    .fourGridCols {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         justify-content: space-between;
@@ -21,8 +21,12 @@
         grid-gap: 4rem;
     }
 
-    .fourColsDesktop > div {
-        margin-bottom: 2rem;
-    }
+}
 
+@media only screen and (max-width: 768px) {
+    .fourGridCols>div {
+        margin-bottom: 2rem;
+        display: flex !important;
+        justify-content: center !important;
+    }
 }

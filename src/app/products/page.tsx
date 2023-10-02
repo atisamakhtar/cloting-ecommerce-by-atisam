@@ -6,18 +6,15 @@ import Image from 'next/image';
 import prodImg from "public/media/homeProduct1.png";
 import Link from 'next/link';
 import styles from "../../css/products.module.css";
+import generic from "../../css/mainCss.module.css";
 
 const page = () => {
 
     const required = useContext(ProductsContext);
 
-    const container = {
-        "margin": "4rem 8rem",
-    }
-
     return (
-        <section style={container}>
-            {required.length > 0} <section className={styles.fourColsDesktop}>
+        <section className={generic.container}>
+            {required.length > 0} <section className={styles.fourGridCols}>
 
                 {required.map((sing: any, index: any) => (
                     <div key={index} >

@@ -6,40 +6,21 @@ import { ProductsContext } from '../../../context/productsContext';
 import Image from 'next/image';
 import prodImg from "public/media/homeProduct1.png";
 import Link from 'next/link';
+import generic from "../../css/mainCss.module.css";
+import styles from "../../css/products.module.css";
 
 const page = () => {
     const router = useRouter()
-    console.log("router", router);
+    // console.log("router", router);
 
     const { slug } = useParams();
     const availableProducts = useContext(ProductsContext);
 
     const required = availableProducts.filter((prod: any) => prod.category == slug);
 
-    // const searchParms = useSearchParams();
-    // const pathName = usePathname();
-
-    // console.log(slug, searchParms)
-    // console.log("pathName", pathName);
-
-    // const url = `${pathName}?${searchParms}`
-    console.log(required)
-
-    const styles = {
-        "display": "grid",
-        "gridTemplateColumns": "1fr 1fr 1fr 1fr",
-        "justifyContent": "space-between",
-        "justifyItems": "center",
-        "gridGap": "4rem",
-    }
-
-    const container = {
-        "margin": "4rem 8rem",
-    }
-
     return (
-        <section style={container}>
-            {required.length > 0} <section style={styles}>
+        <section className={generic.container}>
+            {required.length > 0} <section className={styles.fourGridCols}>
 
                 {required.map((sing: any, index: any) => (
                     <div key={index} >
