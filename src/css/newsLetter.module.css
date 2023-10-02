@@ -7,14 +7,27 @@
     z-index: -1;
 }
 
+.differentBg {
+    font-weight: 800;
+    line-height: 1;
+    color: #f2f3f7;
+    /* position: absolute; */
+    margin-bottom: -20rem;
+    z-index: -1;
+}
+
 @media only screen and ( min-width:768px ) {
-    .newsletterBg {
+    .newsletterBg, .differentBg {
         font-size: 7.5rem;
     }
+    
+    /* .differentBg {
+        font-size: 7.5rem;
+    } */
 }
 
 @media only screen and ( max-width:767px ) {
-    .newsletterBg {
+    .newsletterBg, .differentBg {
         margin-bottom: -9rem;
         font-size: 3rem;
     }

@@ -9,11 +9,11 @@ const NewsLetter = () => {
 
     const newsLetter = {
         "width": "",
-        "z-index": "1",
+        "zIndex": "1",
     }
 
 return (
-    <section className={'my-44 relative'} style={newsLetter} >
+    <section className={'my-28 relative'} style={newsLetter} >
         <div className={`newsletter-bg text-center ${styles.newsletterBg}`}>Newsletter</div>
         <h3 className='text-center mb-6 text-3xl font-bold' >Subscribe Our Newsletter</h3>
         <p className='text-center mb-8'>Get the latest information and promo offers directly</p>

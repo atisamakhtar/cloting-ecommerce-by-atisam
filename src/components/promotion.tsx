@@ -19,9 +19,9 @@ const Promotion = () => {
 
                 {/* Promotion 1 section */}
                 <div>
-                    <div className="my-5 flex items-center bg-gray-300 px-10">
+                    <div className="my-5 pt-5 md:flex items-center bg-gray-300 px-10">
                         <div>
-                            <h3 className='font-bold text-3xl' >GET UP TO <span>60%</span> </h3>
+                            <h3 className='font-bold text-3xl' >GET UP TO <span className='text-4xl' >60%</span> </h3>
                             <p>For the summer season</p>
                         </div>
                         <div>
@@ -31,9 +31,9 @@ const Promotion = () => {
 
                     <div>
                         <div className='my-5 text-center text-gray-100 bg-gray-900 px-10 py-16' >
-                            <h3>GET 30% Off</h3>
+                            <h3 className='font-bold text-5xl mb-3'>GET 30% Off</h3>
                             <p>USE PROMO CODE</p>
-                            <Button>DINEWEEKENDSALE</Button>
+                            <Button className='tracking-[.2rem] bg-gray-700 hover:bg-gray-700 text-md font-bold uppercase px-16' >DINEWEEKENDSALE</Button>
                         </div>
                     </div>
                 </div>
