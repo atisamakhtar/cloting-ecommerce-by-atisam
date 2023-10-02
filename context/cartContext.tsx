@@ -1,7 +1,4 @@
-'use client'
-
-import React, { useState, useReducer } from 'react'
-import { createContext } from 'vm'
+import React, { useReducer, createContext, ReactNode } from 'react';
 
 export type cartProductType = {
     id: number,
@@ -9,19 +6,18 @@ export type cartProductType = {
     tagline: string,
     price: number,
     qty: number,
-}
+};
 
-export const CarttContext = createContext();
+export const CarttContext = createContext<any>(null); // You can replace 'any' with the appropriate type if needed
 
-const cartReducer = (currState:any, action:any) => {
-
-    if (action.type == "increase") {
-
-    } else if (action.type == "decrease") {
-
+const cartReducer = (currState: cartProductType[], action: { type: string }) => {
+    if (action.type === "increase") {
+        console.log("increading product count")
+    } else if (action.type === "decrease") {
+        console.log("decreasing product count")
     }
-
-}
+    return currState; // Return the updated state or the same state if no changes are made
+};
 
 const cartInitialState: cartProductType[] = [
     {
@@ -45,17 +41,16 @@ const cartInitialState: cartProductType[] = [
         price: 225,
         qty: 3,
     },
-]
+];
 
-const CartContext = ({ children }:any) => {
-
-    // const [cartState, dispatch] = useReducer(cartReducer, cartInitialState)
+const CartContextProvider = ({ children }: { children: ReactNode }) => {
+    const [cartState, dispatch] = useReducer(cartReducer, cartInitialState);
 
     return (
-        <CarttContext.Provider value=''>
+        <CarttContext.Provider value={{ cartState, dispatch }}>
             {children}
         </CarttContext.Provider>
-    )
-}
+    );
+};
 
-export default CartContext
+export default CartContextProvider;
