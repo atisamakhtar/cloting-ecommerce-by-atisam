@@ -45,7 +45,7 @@ const MobileNav = () => {
                     <div className='my-5 container flex justify-between' >
                         <div>
                             <Link href={"/"}>
-                                <Image width={1000} height={1000} alt='logo' src='/media/Logo.webp' />
+                                <Image width={180} height={180} alt='logo' src='/media/Logo.webp' />
                             </Link>
                         </div>
                         {navOpen ? (<div>

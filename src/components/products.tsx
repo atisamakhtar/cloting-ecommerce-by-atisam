@@ -25,14 +25,14 @@ const Products = () => {
 
                 {/* Home product 2 section */}
                 <div className='m-auto mb-6 hover:scale-110 transition' >
-                    <Image width={1000} height={1000} className='' alt='Promotion 2 image' src='/media/homeProduct2.png' />
+                    <Image width={500} height={500} className='' alt='Promotion 2 image' src='/media/homeProduct2.png' />
                     <p className="font-semibold text-xl product-name mt-4 mb-1">Cameryn Sash Tie Dress</p>
                     <p className="font-semibold text-xl product-price">$ 545</p>
                 </div>
 
                 {/* Home product 3 section */}
                 <div className='m-auto mb-6 hover:scale-110 transition'>
-                    <Image width={1000} height={1000}  className='' alt='Promotion 2 image' src='/media/homeProduct3.png' />
+                    <Image width={500} height={500}  className='' alt='Promotion 2 image' src='/media/homeProduct3.png' />
                     <p className="font-semibold text-xl product-name mt-4 mb-1">Flex Sweatshirt</p>
                     <p className="font-semibold text-xl product-price">$ 175</p>
                 </div>

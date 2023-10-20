@@ -4,21 +4,21 @@ import { Button } from "./ui/button";
 
 const Promotion = () => {
     return (
-        <section className='container' >
+        <section style={{"overflow": "hidden"}} className='container' >
 
             <div className='text-center' >
                 <span className='text-blue-700 text-sm font-bold' >PROMOTIONS</span>
                 <h2 className='my-3 text-4xl font-bold'>Our Promotions Events</h2>
             </div>
 
-            <section className='my-5 grid md:grid-cols-2 gap-10' >
+            <section className='my-5 grid md:grid-cols-2 md:gap-10' >
 
                 {/* Promotion 1 section */}
                 <div>
                     <div className="my-5 pt-5 md:flex items-center bg-gray-300 px-10">
                         <div>
-                            <h3 className='font-bold text-3xl' >GET UP TO <span className='text-4xl' >60%</span> </h3>
-                            <p>For the summer season</p>
+                            <h3 className='text-gray-800 font-bold text-3xl' >GET UP TO <span className='text-4xl' >60%</span> </h3>
+                            <p className='text-gray-800 ' >For the summer season</p>
                         </div>
                         <div>
                             <Image width={400} height={400} src='/media/promotion1.webp' alt="Promotion 1 image" />
@@ -40,8 +40,8 @@ const Promotion = () => {
                         <div className='p-5 justify-between' >
                             <p className='text-sm' >Flex Sweatshirt</p>
                             <div className="price text-xl">
-                                <span className='pr-3 line-through'>$100.00</span>
-                                <span className='font-bold' >$75.00</span>
+                                <span className='text-black pr-3 line-through'>$100.00</span>
+                                <span className='text-black font-bold' >$75.00</span>
                             </div>
                         </div>
                         <Image width={1000} height={1000} className='m-auto mt-2 mb-0' alt='Promotion 2 image' src='/media/promotion2.png' />
@@ -51,8 +51,8 @@ const Promotion = () => {
                         <div className='p-5 justify-between' >
                             <p className='text-sm' >Flex Sweatshirt</p>
                             <div className="price text-xl">
-                                <span className='pr-3 line-through'>$225.00</span>
-                                <span className='font-bold' >$190.00</span>
+                                <span className='text-black pr-3 line-through'>$225.00</span>
+                                <span className='text-black font-bold' >$190.00</span>
                             </div>
                         </div>
                         <Image width={1000} height={1000} className='m-auto mt-2 mb-0' alt='Promotion 2 image' src='/media/promotion3.webp' />
