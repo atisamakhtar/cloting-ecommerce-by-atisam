@@ -1,6 +1,4 @@
-'use client'
-
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import './globals.css'
 import type { Metadata } from 'next'
@@ -8,6 +6,7 @@ import { Inter } from 'next/font/google';
 import ProductsContextComponent from "../../context/productsContext";
 import MyNavMenu from '@/components/myNavMenu';
 import MobileNav from '@/components/mobileNav';
+import Header from '@/components/header';
 import Footer from '@/components/footer';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -23,19 +22,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  const [mobileNavbar, setMobileNavbar] = useState(false);
-
-  useEffect(() => {
-    if (window.innerWidth < 920) {
-      setMobileNavbar(true);
-    }
-  } , [])
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <ProductsContextComponent>
-          {!mobileNavbar ? <MyNavMenu /> : <MobileNav />}
+          <Header/>
           {children}
           <Footer />
         </ProductsContextComponent>
