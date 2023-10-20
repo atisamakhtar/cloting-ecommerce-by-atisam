@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 
 import Image from 'next/image';
-import logo from "public/media/Logo.webp";
+// import logo from "/media/Logo.webp";
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -29,7 +29,7 @@ const MyNavMenu = () => {
 
                 <div className='' >
                     <Link href={"/"}>
-                        <Image alt='logo' src={logo} />
+                        <Image alt='logo' height={180} width={180} src='/media/Logo.webp' />
                     </Link>
                 </div>
 

@@ -2,10 +2,6 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from "./ui/button";
 
-import promotion1 from "public/media/promotion1.webp";
-import promotion2 from "public/media/promotion2.png";
-import promotion3 from "public/media/promotion3.webp";
-
 const Promotion = () => {
     return (
         <section className='container' >
@@ -25,7 +21,7 @@ const Promotion = () => {
                             <p>For the summer season</p>
                         </div>
                         <div>
-                            <Image src={promotion1} alt="Promotion 1 image" />
+                            <Image width={1000} height={1000} src='/media/promotion1.webp' alt="Promotion 1 image" />
                         </div>
                     </div>
 
@@ -48,7 +44,7 @@ const Promotion = () => {
                                 <span className='font-bold' >$75.00</span>
                             </div>
                         </div>
-                        <Image className='m-auto mt-2 mb-0' alt='Promotion 2 image' src={promotion2} />
+                        <Image width={1000} height={1000} className='m-auto mt-2 mb-0' alt='Promotion 2 image' src='/media/promotion2.webp' />
                     </div>
 
                     <div className='bg-gray-300 flex flex-col my-0' >
@@ -59,7 +55,7 @@ const Promotion = () => {
                                 <span className='font-bold' >$190.00</span>
                             </div>
                         </div>
-                        <Image className='m-auto mt-2 mb-0' alt='Promotion 2 image' src={promotion3} />
+                        <Image width={1000} height={1000} className='m-auto mt-2 mb-0' alt='Promotion 2 image' src='/media/promotion3.webp' />
                     </div>
                 </section>
             </section>

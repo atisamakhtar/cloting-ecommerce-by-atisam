@@ -4,7 +4,6 @@ import React, { useContext } from 'react';
 import { useRouter, usePathname, useParams, useSearchParams } from 'next/navigation';
 import { ProductsContext } from '../../../context/productsContext';
 import Image from 'next/image';
-import prodImg from "public/media/homeProduct1.png";
 import Link from 'next/link';
 import generic from "../../css/mainCss.module.css";
 import styles from "../../css/products.module.css";

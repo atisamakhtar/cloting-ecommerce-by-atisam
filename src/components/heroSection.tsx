@@ -2,13 +2,13 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from './ui/button';
 import { FiShoppingCart } from "react-icons/fi";
-import Bazaar from "public/media/bazaar.png";
-import Bustle from "public/media/bustle.png";
-import Versace from "public/media/versace.png";
-import Instyle from "public/media/Instyle.png";
+// import Bazaar from "/media/bazaar.png";
+// import Bustle from "/media/bustle.png";
+// import Versace from "/media/versace.png";
+// import Instyle from "/media/Instyle.png";
 
-// import lady from "@public/media/lady.webp";
-import lady from "public/media/lady.webp";
+// import lady from "@media/lady.webp";
+// import lady from "/media/lady.webp";
 
 const HeroSection = () => {
 
@@ -40,15 +40,15 @@ const HeroSection = () => {
         </div>
 
         <div className="grid grid-cols-2 space-y-4 md:space-y-0 md:grid-cols-4 my-10 logos justify-between">
-          <div><Image alt='instyle' src={Bazaar} /></div>
-          <div><Image alt='instyle' src={Bustle} /></div>
-          <div><Image alt='instyle' src={Versace} /></div>
-          <div><Image alt='instyle' src={Instyle} /></div>
+          <div><Image width={1000} height={1000} alt='instyle' src='/media/bazaar.png' /></div>
+          <div><Image width={1000} height={1000} alt='instyle' src='/media/bustle.png' /></div>
+          <div><Image width={1000} height={1000} alt='instyle' src='/media/versace.png' /></div>
+          <div><Image width={1000} height={1000} alt='instyle' src='/media/Instyle.png' /></div>
         </div>
 
       </div>
       <div style={styles} className='rounded-full'>
-        <Image src={lady} style={scaleKro} alt='Lady hero image' />
+        <Image width={1000} height={1000} src='/media/lady.webp' style={scaleKro} alt='Lady hero image' />
       </div>
     </section>
   )

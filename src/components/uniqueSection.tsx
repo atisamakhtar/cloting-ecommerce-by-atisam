@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import unique from "public/media/unique-and-authentic.webp"
 import { Button } from "@/components/ui/button";
 import styles from "../css/newsLetter.module.css";
 
@@ -44,7 +43,7 @@ const UniqueSection = () => {
                         </section>
 
                         <section className='z-[100] h-[100%] grid md:grid-cols-2 md:space-x-8' >
-                            <Image src={unique} alt='Unique section image' />
+                            <Image width={1000} height={1000}  src='/media/unique-and-authentic.webp' alt='Unique section image' />
                             <div>
                                 <p className='mb-7 md:mt-0 mt-10'>This piece is ethically crafted in our small family-owned workshop in Peru with unmatched attention to detail and care. The Natural color is the actual natural color of the fiber, undyed and 100% traceable.</p>
                                 <Button className='rounded-none capitalize' >See all products</Button>

@@ -1,7 +1,6 @@
 "use client"
 
 import React, {useContext} from 'react';
-import logo from "public/media/Logo.webp";
 import Image from 'next/image';
 import { AiOutlineTwitter } from 'react-icons/ai';
 import { BiLogoFacebook } from 'react-icons/bi';
@@ -21,7 +20,7 @@ const Footer = () => {
         <>
             <section className={`mt-10 md:py-[4rem] md:px-[8rem] upper-footer ${styles.footerCss}`} >
                 <div className='w-[75%] flex justify-between flex-col' >
-                    <Image className='mb-4' width="180" src={logo} alt="footer logo" />
+                    <Image className='mb-4' width="180" height={1000} src='/media/Logo.webp' alt="footer logo" />
                     <p className='mb-4'>Small, artisan label that offers a thoughtfully curated collection of high quality everyday essentials made.</p>
                     <div className='flex' >
                         <AiOutlineTwitter className="text-4xl mr-5 rounded-md bg-gray-200 p-2" />

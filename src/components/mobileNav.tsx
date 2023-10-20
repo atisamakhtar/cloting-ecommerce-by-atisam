@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RiCloseFill } from 'react-icons/ri';
-import logo from "public/media/Logo.webp";
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from "../css/mobileNav.module.css";
@@ -30,7 +29,7 @@ const MobileNav = () => {
             <nav className='my-5 container flex justify-between' >
                 <div>
                     <Link href={"/"}>
-                        <Image alt='logo' src={logo} />
+                        <Image width={1000} height={1000} alt='logo' src='/media/Logo.webp' />
                     </Link>
                 </div>
                 {navOpen ? (<div>
@@ -46,7 +45,7 @@ const MobileNav = () => {
                     <div className='my-5 container flex justify-between' >
                         <div>
                             <Link href={"/"}>
-                                <Image alt='logo' src={logo} />
+                                <Image width={1000} height={1000} alt='logo' src='/media/Logo.webp' />
                             </Link>
                         </div>
                         {navOpen ? (<div>
