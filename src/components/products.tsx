@@ -18,7 +18,7 @@ const Products = () => {
             <section className='grid md:grid-cols-3 md:space-x-10' >
 
                 <div className="m-auto mb-6 hover:scale-110 transition">
-                    <Image width={1000} height={1000} src='/media/homeProduct1.png' alt="Promotion 1 image" />
+                    <Image width={400} height={400} src='/media/homeProduct1.png' alt="Promotion 1 image" />
                     <p className="font-semibold text-xl product-name mt-4 mb-1">Brushed Raglan Sweatshirt</p>
                     <p className="font-semibold text-xl product-price">$ 195</p>
                 </div>
