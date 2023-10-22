@@ -1,43 +1,61 @@
-'use client'
+// 'use client'
 
-import React, { useContext, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import prodImage from "/media/homeProduct1.png";
-import { useRouter, useParams } from 'next/navigation';
+// import { useParams } from 'next/navigation';
+import { useRouter } from 'next/navigation';
+
 import { ProductsContext } from '../../../../context/productsContext';
 import { productType } from '../../../../context/productsContext';
 import { Button } from "@/components/ui/button";
-import { FiShoppingCart } from "react-icons/fi";
 import styles from "../../../css/products.module.css";
+import client from '@/lib/sanityClient';
+import { getSingleProduct } from '@/lib/sanityClient';
+import SingleProductCart from '@/components/quantity';
+import { urlFor } from '@/lib/imageUrl';
+// import {RouterSlug} from '@/components/routerSlug';
 
-const page = () => {
-
-    const [count, setCount] = useState(1);
+const page = async ({ params, searchParams }: {
+    params: { id: string },
+    searchParams: { id: string },
+}) => {
 
     const container = {
         "margin": "4rem 8rem",
     }
 
-    const availableProducts = useContext(ProductsContext);
+    // const availableProducts = useContext(ProductsContext);
 
-    const { id } = useParams();
+    // const router = useRouter();
+
+    // const id: (string | string[] | undefined) = router.query.id;
+
+    // const idToParse: string = Array.isArray(id) ? id[0] : (typeof id === 'string' ? id : '');
+
+    // idToParse
+
+    // const getDataFromChild = (data) => {
+        
+    // }
+    
+    // const {idToParse} = useRouter();
+    
+    const required = await getSingleProduct(params.id);
+    
     // console.log(typeof parseInt(id));
-    const idToParse: number = Array.isArray(id) ? parseInt(id[0]) : parseInt(id);
-
-    const required: (undefined | productType) = availableProducts.find((sing: productType) => sing.id === idToParse);
-
-    // console.log("required", required)
-
     return (
         (required) && <section style={container} >
             <section className={styles.singleProductWrapper}>
+                {/* <RouterSlug/> */}
                 <div className={styles.imagesGrid} >
                     <div>
-                        <Image className='w-[100%]' src={required.image} width={250} height={250}  alt='Product Image' />
+                        <Image className='w-[100%]' src={urlFor(required.image).url()} width={250} height={250}  alt='Product Image' />
                     </div>
                     <div>
-                        <Image className='w-[100%]' src={required.image} width={250} height={250} alt='Product Image' />
+                        <Image className='w-[100%]' src={urlFor(required.image).url()} width={250} height={250} alt='Product Image' />
                     </div>
+
                 </div>
                 <div className='mt-16' >
                     <h2 className='text-2xl font-semibold' >{required.title}</h2>
@@ -53,22 +71,7 @@ const page = () => {
                         </div>
                     </div>
 
-                    {/* quantity section */}
-                    <div className='my-10 flex items-center space-x-4' >
-                        <h3 className='mb-2 uppercase font-semibold' >Select Size</h3>
-                        <div className='flex items-center justify-center space-x-3' >
-                            <button onClick={() => { (count >= 1) && setCount(count - 1) }} className='rounded-full text-2xl bg-gray-50 flex justify-center items-center h-10 w-10 mr-2' >-</button>
-                            <span className='ml-0'>{count}</span>
-                            <button onClick={() => { setCount(count + 1) }} className='rounded-full text-2xl border-2 border-black bg-gray-50 flex justify-center items-center h-10 w-10 mr-2' >+</button>
-                        </div>
-                    </div>
-
-                    <div className='flex items-center' >
-                        <Button className='px-8 rounded-none' >
-                            <FiShoppingCart className="font-semibold text-xl mr-3" />Add to cart
-                        </Button>
-                        <p className='text-2xl font-bold ml-4' >${required.price}</p>
-                    </div>
+                    <SingleProductCart required={required} />
                 </div>
             </section>
         </section>
