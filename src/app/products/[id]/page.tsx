@@ -24,30 +24,12 @@ const page = async ({ params, searchParams }: {
     const container = {
         "margin": "4rem 8rem",
     }
-
-    // const availableProducts = useContext(ProductsContext);
-
-    // const router = useRouter();
-
-    // const id: (string | string[] | undefined) = router.query.id;
-
-    // const idToParse: string = Array.isArray(id) ? id[0] : (typeof id === 'string' ? id : '');
-
-    // idToParse
-
-    // const getDataFromChild = (data) => {
-        
-    // }
-    
-    // const {idToParse} = useRouter();
     
     const required = await getSingleProduct(params.id);
     
-    // console.log(typeof parseInt(id));
     return (
         (required) && <section style={container} >
             <section className={styles.singleProductWrapper}>
-                {/* <RouterSlug/> */}
                 <div className={styles.imagesGrid} >
                     <div>
                         <Image className='w-[100%]' src={urlFor(required.image).url()} width={250} height={250}  alt='Product Image' />
