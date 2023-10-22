@@ -1,6 +1,6 @@
 // 'use client'
 
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import prodImage from "/media/homeProduct1.png";
 // import { useParams } from 'next/navigation';
@@ -24,18 +24,28 @@ const page = async ({ params, searchParams }: {
     const container = {
         "margin": "4rem 8rem",
     }
-    
+
     const required = await getSingleProduct(params.id);
-    
+    console.log("required.imageList", required.imageList);
+
     return (
         (required) && <section style={container} >
             <section className={styles.singleProductWrapper}>
                 <div className={styles.imagesGrid} >
                     <div>
-                        <Image className='w-[100%]' src={urlFor(required.image).url()} width={250} height={250}  alt='Product Image' />
+                    {required.imageList.map((sing:any, index:number) => (
+                        <Image
+                            className='w-[100%] mb-3'
+                            src={urlFor(required.imageList[index]).url()}
+                            width={250}
+                            height={250}
+                            alt='Product Image'
+                        />
+                        ))
+                    }
                     </div>
                     <div>
-                        <Image className='w-[100%]' src={urlFor(required.image).url()} width={250} height={250} alt='Product Image' />
+                        <Image className='w-[100%]' src={urlFor(required.imageList[0]).url()} width={250} height={250} alt='Product Image' />
                     </div>
 
                 </div>

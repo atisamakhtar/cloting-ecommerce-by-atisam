@@ -32,12 +32,26 @@ export const productScheme = {
         {
             name: "quantity",
             title: "Product quantity",
-            type: "number"
+            type: "number",
+            validation: (Rule: { custom: (arg: (quantity: number) => string | true) => any }) =>
+                Rule.custom((quantity: number) => {
+                    if (quantity < 0) {
+                        return "Quantity cannot be less than 0";
+                    }
+                    return true; // Validation passed
+                }),
         },
         {
-            name: "image",
+            name: "imageList",
             title: "Product Image",
-            type: "image"
+            type: "array",
+            of: [
+                {
+                    name: 'image',
+                    title: 'Add an image',
+                    type: 'image',
+                }
+            ]
         },
     ]
 }
